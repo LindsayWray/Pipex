@@ -1,0 +1,10 @@
+obj/
+test_output
+input.txt
+pipex
+tester.sh
+.DS_Store
+massive_input
+out
+out.txt
+output
