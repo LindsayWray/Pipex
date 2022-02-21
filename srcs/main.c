@@ -26,13 +26,16 @@ int	main(int argc, char **argv, char **envp)
 		error("fork error");
 	if (pid == 0)
 		process(get_input(argv[1]), p[1], argv [2], envp);
-	wait (0);
-	close (p[1]);
 	pid = fork();
 	if (pid == -1)
 		error("fork error");
 	if (pid == 0)
+	{
+		close (p[1]);
 		process(p[0], get_output(argv[4]), argv[3], envp);
+	}
+	wait (0);
+	close (p[1]);
 	close (p[0]);
 	wait (0);
 	return (0);
