@@ -1,0 +1,9 @@
+.DS_Store
+input.txt
+libft/libft.a
+libft/obj/
+obj/
+out
+out2
+pipex
+test_output/
